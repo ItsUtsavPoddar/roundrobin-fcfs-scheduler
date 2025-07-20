@@ -38,7 +38,51 @@ So I designed my own simulation from scratch — with:
   - 📈 Average metrics
 
 ---
-## 🧪 Sample Input (Official Coursework Test Case)
+
+## 📘 Official Coursework Problem Statement
+
+As part of our **Operating Systems Final Project**, we were required to design a **menu-driven C program** to simulate CPU scheduling using:
+
+1. **First Come First Served (FCFS)**
+2. **Round Robin (RR)** with a user-defined time quantum
+
+##
+
+### 📝 Program Requirements
+
+The C program should:
+
+- Accept user input for:
+  - Number of processes
+  - Process IDs (assumed unique)
+  - Arrival times and CPU burst times
+- Provide a **switch-case menu interface** with:
+  - Option 1: Execute FCFS
+  - Option 2: Execute RR
+  - Option 3: Exit the program
+- Allow entry of **time quantum** when RR is selected
+- Simulate the scheduling policy and print:
+  - Gantt Chart
+  - Process Table including:
+    - Waiting Time (WT)
+    - Turnaround Time (TAT)
+    - Response Time (RT)
+  - Averages of each time metric
+
+##
+
+### 📊 Scheduling Constraints
+
+- Each process has only **one CPU burst** (no I/O wait).
+- RR Scheduling should follow:
+  - **Preemption** based on time quantum
+  - Newly arrived processes go to the **back of the ready queue**
+  - Interrupted processes return to the **end of the queue**
+- Output must be **formatted clearly** for visual analysis.
+
+##
+### 🧪 Sample Input (Official Coursework Test Case)
+
 
 **Processes:**
 
@@ -52,13 +96,13 @@ So I designed my own simulation from scratch — with:
 
 **Time Quantum for RR: 4 ms**
 ##
-### 🔁 Round Robin Output (MAIN HIGHLIGHT)
-#### Gantt Chart for Round Robin Scheduling (Time Quantum = 4):
+#### 🔁 Round Robin Output (MAIN HIGHLIGHT)
+##### Gantt Chart for Round Robin Scheduling (Time Quantum = 4):
 
 | P1  | P2  | P3  | P4  | P1  | P5  | P1  | P5  |
 |-----|-----|-----|-----|-----|-----|-----|-----|
 
-#### 🔁 Round Robin – Process Table
+##### 🔁 Round Robin – Process Table
 
 | Process | Arrival Time | Burst Time | Waiting Time | Turnaround Time | Response Time |
 |---------|--------------|------------|---------------|------------------|----------------|
@@ -74,13 +118,13 @@ So I designed my own simulation from scratch — with:
 
 ##
 
-### ⚙️ FCFS Output
-#### Gantt Chart for FCFS Scheduling:
+#### ⚙️ FCFS Output
+##### Gantt Chart for FCFS Scheduling:
 
 | P1  | P2  | P3  | P4  | P5  |
 |-----|-----|-----|-----|-----|
 
-#### 🔹 FCFS – Process Table
+##### 🔹 FCFS – Process Table
 
 | Process | Arrival Time | Burst Time | Finish Time | Turnaround Time | Waiting Time | Response Time |
 |---------|--------------|------------|-------------|------------------|---------------|----------------|
@@ -93,6 +137,25 @@ So I designed my own simulation from scratch — with:
 - Average Waiting Time: 7.20
 - Average Turnaround Time: 11.00
 - Average Response Time: 7.20
+
+##
+
+#### 📊 Analysis
+
+Compared to FCFS, **Round Robin (RR)**:
+- 🟢 Reduced **average waiting time** from `7.20 → 5.20`
+- 🧠 Improved **average response time** from `7.20 → 3.20`
+- ⚖️ Achieved **fairer distribution of CPU time**  
+- 💬 Showed how preemptive scheduling improves short-task response
+
+##
+
+#### ✅ Conclusion
+
+This validated test case was part of my official OS lab coursework.  
+It proves that the logic, Gantt chart, and averages are correct — even under non-trivial burst/arrival patterns.
+
+---
 
 ## ▶️ How to Run
 
