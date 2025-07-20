@@ -38,6 +38,61 @@ So I designed my own simulation from scratch — with:
   - 📈 Average metrics
 
 ---
+## 🧪 Sample Input (Official Coursework Test Case)
+
+**Processes:**
+
+| Process | Arrival Time | Burst Time |
+|---------|--------------|------------|
+| P1      | 0            | 10         |
+| P2      | 1            | 1          |
+| P3      | 2            | 2          |
+| P4      | 3            | 1          |
+| P5      | 6            | 5          |
+
+**Time Quantum for RR: 4 ms**
+##
+### 🔁 Round Robin Output (MAIN HIGHLIGHT)
+#### Gantt Chart for Round Robin Scheduling (Time Quantum = 4):
+
+| P1  | P2  | P3  | P4  | P1  | P5  | P1  | P5  |
+|-----|-----|-----|-----|-----|-----|-----|-----|
+
+#### 🔁 Round Robin – Process Table
+
+| Process | Arrival Time | Burst Time | Waiting Time | Turnaround Time | Response Time |
+|---------|--------------|------------|---------------|------------------|----------------|
+| P1      | 0            | 10         | 8             | 18               | 0              |
+| P2      | 1            | 1          | 3             | 4                | 3              |
+| P3      | 2            | 2          | 3             | 5                | 3              |
+| P4      | 3            | 1          | 4             | 5                | 4              |
+| P5      | 6            | 5          | 8             | 13               | 6              |
+
+- Average Waiting Time: 5.20
+- Average Turnaround Time: 9.00
+- Average Response Time: 3.20
+
+##
+
+### ⚙️ FCFS Output
+#### Gantt Chart for FCFS Scheduling:
+
+| P1  | P2  | P3  | P4  | P5  |
+|-----|-----|-----|-----|-----|
+
+#### 🔹 FCFS – Process Table
+
+| Process | Arrival Time | Burst Time | Finish Time | Turnaround Time | Waiting Time | Response Time |
+|---------|--------------|------------|-------------|------------------|---------------|----------------|
+| P1      | 0            | 10         | 10          | 10               | 0             | 0              |
+| P2      | 1            | 1          | 11          | 10               | 9             | 9              |
+| P3      | 2            | 2          | 13          | 11               | 9             | 9              |
+| P4      | 3            | 1          | 14          | 11               | 10            | 10             |
+| P5      | 6            | 5          | 19          | 13               | 8             | 8              |
+
+- Average Waiting Time: 7.20
+- Average Turnaround Time: 11.00
+- Average Response Time: 7.20
 
 ## ▶️ How to Run
 
